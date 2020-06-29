@@ -1,6 +1,64 @@
 import React from 'react';
 
+const movieStyle = {
+    flexBasis: "22%",
+    display: "flex",
+    flexDirection: "column",
+    listStyle: "none",
+    boxSizing: "border-box",
+    minWidth: 100,
+	margin: "1.5%",
+    border: "1px solid #eee",
+    boxShadow: "0 10px 28px -7px"
+}
 
+ const movieImg = {
+    width: "100%"
+}
+
+ const movieDescription = {
+    display: "flex",
+    flexGrow: 1,
+    flexDirection: "column",
+    justifyContent: "space-between",
+    padding: 10,
+}
+
+
+ const movieDescriptionHeadline = {
+    color: "#555",
+	fontWeight: "bold",
+	marginBottom: 20,
+}
+
+ const movieDetails = {
+    display: "flex",
+	justifyContent: "space-between",
+}
+
+ const movieDetailSpan = {
+    color: "#555",
+	fontSize: "0.8rem",
+	fontWeight: "bold",
+}
+
+ const movieYear = {
+    display: "flex",
+	flexDirection: "column",
+}
+
+ const movieRating = {
+    alignItems: "flex-end",
+    display: "flex",
+	flexDirection: "column",
+}
+
+ const movieTitle = {
+    color: "#aaa",
+	marginBottom: 5,
+	fontSize: "0.65rem",
+	fontWeight: "normal",
+}
 
 const MovieListItem = ({ movie }) => {
     const { id, title, poster_path, release_date, vote_average  } = movie;

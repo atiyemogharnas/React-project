@@ -12,7 +12,7 @@ export default class Main extends Component {
         return (
             <section className="MainStyle">
                 <Navigation />
-                Movies 
+                <Movies /> 
             </section>
         )
     }
