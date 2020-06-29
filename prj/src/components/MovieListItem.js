@@ -6,7 +6,7 @@ const movieStyle = {
     flexDirection: "column",
     listStyle: "none",
     boxSizing: "border-box",
-    minWidth: 400,
+    minWidth: 100,
 	margin: "1.5%",
     border: "1px solid #eee",
     boxShadow: "0 10px 28px -7px"
