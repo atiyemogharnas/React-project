@@ -11,7 +11,7 @@ const movieStyle = {
     border: "1px solid #eee",
     boxShadow: "0 10px 28px -7px"
 }
-
+    
  const movieImg = {
     width: "100%"
 }
