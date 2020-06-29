@@ -5,7 +5,7 @@ export default class Movies extends React.Component {
   render() {
     return (
       <section className="movies">
-        Movies
+        <Movie/>
       </section>
     )
   }

@@ -15,7 +15,7 @@ const title = {
 
 const Header = () => (
     <header style={HeaderStyle}>
-        <h1 style={title}>Find Me A Film!</h1>
+        <h1 style={title}>فیلم یاب </h1>
     </header>
 );
 

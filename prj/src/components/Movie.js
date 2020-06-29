@@ -1,6 +1,12 @@
 import React, { Component } from 'react';
 import MovieListItem from './MovieListItem';
-
+const moviesStyle = {
+    flexBasis: "80%",
+    display: "flex",
+    flexWrap: "wrap",
+    padding: "20px 0",
+    margin: 0,    
+}
 export default class Movie extends Component {
     constructor(props) {
         super(props);
@@ -31,7 +37,7 @@ export default class Movie extends Component {
     render() {
         return (
             <section>
-                <ul>
+                <ul  style={moviesStyle}>
                     {
                         this.state.movies.map(movie =>  {                    
                             return (
