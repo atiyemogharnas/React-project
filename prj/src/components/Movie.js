@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import MovieListItem from './MovieListItem';
+
+
 const moviesStyle = {
     flexBasis: "80%",
     display: "flex",
@@ -7,6 +9,7 @@ const moviesStyle = {
     padding: "20px 0",
     margin: 0,    
 }
+
 export default class Movie extends Component {
     constructor(props) {
         super(props);
@@ -16,7 +19,7 @@ export default class Movie extends Component {
     }
 
     componentDidMount() {
-        const API_URL = `http://api.themoviedb.org/3/discover/movie?api_key=afb96b9738f60f3725583b1784cfaa0e&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1`
+        const API_URL = `http://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_TMDB_API_KEY}&language=en-US&sort_by=popularity.desc&include_adult=false&include_video=false&page=1`
 
         fetch(API_URL)
             .then(response => response.json())
@@ -37,7 +40,7 @@ export default class Movie extends Component {
     render() {
         return (
             <section>
-                <ul  style={moviesStyle}>
+                <ul style={moviesStyle}>
                     {
                         this.state.movies.map(movie =>  {                    
                             return (
@@ -52,4 +55,4 @@ export default class Movie extends Component {
             </section>
         )
     }
-}
+} 

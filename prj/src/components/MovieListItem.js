@@ -6,17 +6,17 @@ const movieStyle = {
     flexDirection: "column",
     listStyle: "none",
     boxSizing: "border-box",
-    minWidth: 100,
+    minWidth: 400,
 	margin: "1.5%",
     border: "1px solid #eee",
     boxShadow: "0 10px 28px -7px"
 }
-    
- const movieImg = {
+
+const movieImg = {
     width: "100%"
 }
 
- const movieDescription = {
+const movieDescription = {
     display: "flex",
     flexGrow: 1,
     flexDirection: "column",
@@ -25,67 +25,72 @@ const movieStyle = {
 }
 
 
- const movieDescriptionHeadline = {
+const movieDescriptionHeadline = {
     color: "#555",
 	fontWeight: "bold",
 	marginBottom: 20,
 }
 
- const movieDetails = {
+const movieDetails = {
     display: "flex",
 	justifyContent: "space-between",
 }
 
- const movieDetailSpan = {
+const movieDetailSpan = {
     color: "#555",
 	fontSize: "0.8rem",
 	fontWeight: "bold",
 }
 
- const movieYear = {
+const movieYear = {
     display: "flex",
 	flexDirection: "column",
 }
 
- const movieRating = {
+const movieRating = {
     alignItems: "flex-end",
     display: "flex",
 	flexDirection: "column",
 }
 
- const movieTitle = {
+const movieTitle = {
     color: "#aaa",
 	marginBottom: 5,
 	fontSize: "0.65rem",
 	fontWeight: "normal",
 }
 
+
+
+
 const MovieListItem = ({ movie }) => {
-    const { id, title, poster_path, release_date, vote_average  } = movie;
+    const { id, title, poster_path, release_date, vote_average } = movie;
     const imgUrl = `https://image.tmdb.org/t/p/w342/${poster_path}`;
     const year = release_date.substring(0, 4);
 
     return (
         <li key={id} style={movieStyle}>
-        <img src={imgUrl} 
-             alt={title} 
-             style={movieImg}/>
-        <div style={movieDescription}>
-            <h2 style={movieDescriptionHeadline}>{title}</h2>
-            <section style={movieDetails}>
-                <div style={movieYear}>
-                    <span style={movieTitle}>Year</span>
-                    <span>{year}</span>
-                </div>   
-                <div style={movieRating}>
-                    <span style={movieTitle}>Rating</span>
-                    <span>{vote_average}</span>
-                </div>
-            </section>
-        </div>
-    </li> 
-);
+            <img src={imgUrl} 
+                 alt={title} 
+                 style={movieImg}
+				 title={title}/>
+            <div style={movieDescription}>
+                <h2 style={movieDescriptionHeadline}>{title}</h2>
+                <section style={movieDetails}>
+                    <div style={movieYear}>
+                        <span style={movieTitle}>Year</span>
+                        <span>{year}</span>
+                    </div>   
+                    <div style={movieRating}>
+                        <span style={movieTitle}>Rating</span>
+                        <span>{vote_average}</span>
+                    </div>
+                </section>
+            </div>
+        </li> 
+    );
 };
 
-    
-export default MovieListItem;
+
+
+export default MovieListItem; 

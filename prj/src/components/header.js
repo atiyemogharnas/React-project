@@ -15,8 +15,9 @@ const title = {
 
 const Header = () => (
     <header style={HeaderStyle}>
-        <h1 style={title}>فیلم یاب </h1>
+        <h1 style={title}>فیلم یاب!</h1>
     </header>
+
 );
 
 export default Header; 

@@ -4,7 +4,7 @@ import Movie from "./Movie";
 export default class Movies extends React.Component {
   render() {
     return (
-      <section className="movies">
+      <section>
         <Movie/>
       </section>
     )

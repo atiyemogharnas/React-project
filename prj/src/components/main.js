@@ -7,12 +7,11 @@ const mainStyle = {
 }
 
 export default class Main extends Component {
-    
     render() {
         return (
-            <section className="MainStyle">
+            <section style={mainStyle}>
                 <Navigation />
-                <Movies /> 
+                <Movies />
             </section>
         )
     }
